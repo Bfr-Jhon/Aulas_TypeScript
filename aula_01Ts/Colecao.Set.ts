@@ -1,5 +1,3 @@
-import read = require("readline-sync");
-
 const cores: Set<string> = new Set<string>();
 
 cores.add("Azul");
@@ -11,10 +9,11 @@ cores.add("Amarelo");
 console.table(cores)
 
 // Verifica se o elemento existe
-console.log("A cor Verde existe? ", cores.has("verde"));
+console.log("A cor Verde existe? ", cores.has("verde")); // a resposta será False, pois o Set diferencia maiúsculas de minúsculas
+console.log("A cor verde existe? ", cores.has("Verde")); // a resposta será True 
 
 // Deletar elemento
-cores.delete("Azul");
+//cores.delete("Azul");
 
 console.table(cores);
 
